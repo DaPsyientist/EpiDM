@@ -70,12 +70,12 @@ Ppt_attn, Ppt_attnum = attn_num(Enc_DF)
 print(f'SANITY CHECK #3 (Attention Responses): Participant responded {Ppt_attnum} times, it should be 20.')
 
 #Specify Answer Key (for attention checks)
-Attn_Ans = ['a', 'o', 'a', 'a', 'a', 'a', 'a', 'a', 'o', 'a', 'a', 'o', 'a', 'a', 'a', 'o', 'o', 'a', 'o', 'a']
+Attn_Ans = [4, 5, 2, 1, 2, 5, 1, 2, 0, 2, 4, 2, 3, 4, 2, 4, 3, 1, 1, 2]
 
 #Define function to calculate attention check accuracy
 def Attn_check(df):
     correct = 0
-    resps = [data for data in df['Attn_resp.keys'] if data == 'a' or data == 'o'][2:] #indexing from 2 removes both training trials
+    resps = [data for data in df['Attn_resp.keys'] if data == 0 or data == 1 or data == 2 or data == 3 or data == 4 or data == 5][2:] #indexing from 2 removes both training trials
     for i in range(len(resps)):
         if resps[i] == Attn_Ans[i]:
             correct += 1
@@ -176,7 +176,12 @@ for i in range(160):
             Left_Pseudo.append(New_ON.pop(0))
             Right_Pseudo.append(Old_ON.pop(0))
             Temp = Old_pts.pop(0)
-            New_Temp = str(5-int(Temp[:2])) + ' Points'
+            # Split the Temp string and take the first part
+            point_value = Temp.split()[0]
+            if point_value.isdigit():  # Check if the extracted part is a digit
+                New_Temp = str(5 - int(point_value)) + ' Points'
+            else:
+                New_Temp = 'Invalid Points'  # Handle non-numeric values
             Right_Pts.append(Temp)
             Left_Pts.append(New_Temp)
             tracker += 1
@@ -184,18 +189,25 @@ for i in range(160):
             Left_Pseudo.append(Old_ON.pop(0))
             Right_Pseudo.append(New_ON.pop(0))
             Temp = Old_pts.pop(0)
-            New_Temp = str(5-int(Temp[:2])) + ' Points'
+            # Split the Temp string and take the first part
+            point_value = Temp.split()[0]
+            if point_value.isdigit():  # Check if the extracted part is a digit
+                New_Temp = str(5 - int(point_value)) + ' Points'
+            else:
+                New_Temp = 'Invalid Points'  # Handle non-numeric values
             Left_Pts.append(Temp)
             Right_Pts.append(New_Temp)
             tracker += 1
     else:
         if old_tracker <= 80:
-            split_set = splitr(PS1_Old[old_tracker-1])
-            Left_Pseudo.append(selections[int(split_set[0])-2])
-            Right_Pseudo.append(selections[int(split_set[1])-2])
-            Left_Pts.append(clean_pts[int(split_set[0])-2])
-            Right_Pts.append(clean_pts[int(split_set[1])-2])
+            split_set = splitr(PS1_Old[old_tracker - 1])
+            Left_Pseudo.append(selections[int(split_set[0]) - 2])
+            Right_Pseudo.append(selections[int(split_set[1]) - 2])
+            Left_Pts.append(clean_pts[int(split_set[0]) - 2])
+            Right_Pts.append(clean_pts[int(split_set[1]) - 2])
             old_tracker += 1
+
+
 
 
 

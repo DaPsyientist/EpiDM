@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on Sun Jun  2 16:18:49 2024
+    on Mon Jun  3 17:24:45 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -2371,7 +2371,7 @@ for thisPractice_Encoding_Loop in Practice_Encoding_Loop:
                 win.callOnFlip(Attn_resp.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(Attn_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if Attn_resp.status == STARTED and not waitOnFlip:
-                theseKeys = Attn_resp.getKeys(keyList=['a', 'o'], waitRelease=False)
+                theseKeys = Attn_resp.getKeys(keyList=['0', '1', '2', '3', '4', '5'], waitRelease=False)
                 _Attn_resp_allKeys.extend(theseKeys)
                 if len(_Attn_resp_allKeys):
                     Attn_resp.keys = _Attn_resp_allKeys[-1].name  # just the last key pressed
@@ -3904,7 +3904,7 @@ for thisEncoding_Loop in Encoding_Loop:
                     win.callOnFlip(Attn_resp.clock.reset)  # t=0 on next screen flip
                     win.callOnFlip(Attn_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
                 if Attn_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = Attn_resp.getKeys(keyList=['a', 'o'], waitRelease=False)
+                    theseKeys = Attn_resp.getKeys(keyList=['0', '1', '2', '3', '4', '5'], waitRelease=False)
                     _Attn_resp_allKeys.extend(theseKeys)
                     if len(_Attn_resp_allKeys):
                         Attn_resp.keys = _Attn_resp_allKeys[-1].name  # just the last key pressed
