@@ -60,8 +60,8 @@ print(f'SANITY CHECK #2 (Missing Responses): Participant had {240-Ppt_respnum} m
 #Define function to pull out responses to attention check
 def attn_num(df):
     #Evaluate responses
-    resps = [data for data in df['Attn_resp.keys'] if data == 'a' or data == 'o'][1:] #indexing from 1 removes training trial
-    attn_len = len([data for data in df['Attn_resp.keys'] if data == 'a' or data == 'o'][2:]) #indexing from 2 removes both training trials
+    resps = [data for data in df['Attn_resp.keys'] if data == 0 or data == 1 or data == 2 or data == 3 or data == 4 or data == 5][2:] #indexing from 1 removes training trials
+    attn_len = len(resps) #indexing from 2 removes both training trials
     return resps, attn_len
 #Pull out responses to attention checks
 Ppt_attn, Ppt_attnum = attn_num(Enc_DF)
@@ -148,7 +148,7 @@ for i in range(len(ON)):
         ON_Bool.append(False)
 # Pull out Old stimuli for O/N trials
 # Matched Old selections for new trials
-Old_ON = list(np.array(selections)[ON_Bool]) 
+Old_ON  = list(np.array(selections)[ON_Bool]) 
 Old_pts = list(np.array(clean_pts)[ON_Bool])
 # Import new stimuli
 PS1_New = list(pd.read_csv(Select, header=None)[0].values)
