@@ -12,7 +12,7 @@ import numpy as np
 
 ##   Step 1: Read in participant data  ##
 # Set Working Directory
-pwd = os.getcwd() + str("/PsyExp_R/Data/")
+pwd = os.getcwd() + str("/")
 
 #List the files specified in the command line
 inputFiles = sys.argv[1:]
