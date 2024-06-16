@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on Thu Jun 13 23:47:33 2024
+    on Sun Jun 16 15:42:35 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -288,14 +288,14 @@ L_Scene_FB_Stim = visual.ImageStim(
 
 # --- Initialize components for Routine "Confidence" ---
 Confidence_RQ_Stim = visual.TextStim(win=win, name='Confidence_RQ_Stim',
-    text="How confident are you that you've seen this image before?",
+    text='How confident are you in your decision?',
     font='Open Sans',
     pos=(0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 Confidence_LQ_Stim = visual.TextStim(win=win, name='Confidence_LQ_Stim',
-    text="How confident are you that you've seen this image before?",
+    text='How confident are you in your decision?',
     font='Open Sans',
     pos=(-0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -338,53 +338,6 @@ Confidence_Scale = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-8.0)
-
-# --- Initialize components for Routine "ITI" ---
-ITI_Stim = visual.TextStim(win=win, name='ITI_Stim',
-    text=' ',
-    font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=1.0, 
-    languageStyle='LTR',
-    depth=0.0);
-
-# --- Initialize components for Routine "Value" ---
-Sq_Value_Stim = visual.Rect(
-    win=win, name='Sq_Value_Stim',units='norm', 
-    width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0, .2), anchor='center',
-    lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=0.0, interpolate=True)
-Value_L_Stim = visual.ImageStim(
-    win=win,
-    name='Value_L_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0.1), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
-Value_R_Stim = visual.ImageStim(
-    win=win,
-    name='Value_R_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0.12), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
-Value_Slider = visual.Slider(win=win, name='Value_Slider',
-    startValue=None, size=(1.0, 0.1), pos=(0, -0.28), units=None,
-    labels=['0', '1', '2', '3', '4', '5'], ticks=(1, 2, 3, 4, 5, 6), granularity=1.0,
-    style='rating', styleTweaks=(), opacity=None,
-    labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
-    font='Open Sans', labelHeight=0.05,
-    flip=False, ori=0.0, depth=-3, readOnly=False)
-Value_Q_Stim = visual.TextStim(win=win, name='Value_Q_Stim',
-    text='Select the value of the image you remember:',
-    font='Open Sans',
-    pos=(0, 0.44), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-5.0);
 
 # --- Initialize components for Routine "ITI" ---
 ITI_Stim = visual.TextStim(win=win, name='ITI_Stim',
@@ -527,14 +480,14 @@ L_Scene_FB_Stim = visual.ImageStim(
 
 # --- Initialize components for Routine "Confidence" ---
 Confidence_RQ_Stim = visual.TextStim(win=win, name='Confidence_RQ_Stim',
-    text="How confident are you that you've seen this image before?",
+    text='How confident are you in your decision?',
     font='Open Sans',
     pos=(0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 Confidence_LQ_Stim = visual.TextStim(win=win, name='Confidence_LQ_Stim',
-    text="How confident are you that you've seen this image before?",
+    text='How confident are you in your decision?',
     font='Open Sans',
     pos=(-0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -577,53 +530,6 @@ Confidence_Scale = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-8.0)
-
-# --- Initialize components for Routine "ITI" ---
-ITI_Stim = visual.TextStim(win=win, name='ITI_Stim',
-    text=' ',
-    font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=1.0, 
-    languageStyle='LTR',
-    depth=0.0);
-
-# --- Initialize components for Routine "Value" ---
-Sq_Value_Stim = visual.Rect(
-    win=win, name='Sq_Value_Stim',units='norm', 
-    width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0, .2), anchor='center',
-    lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=0.0, interpolate=True)
-Value_L_Stim = visual.ImageStim(
-    win=win,
-    name='Value_L_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0.1), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
-Value_R_Stim = visual.ImageStim(
-    win=win,
-    name='Value_R_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0.12), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
-Value_Slider = visual.Slider(win=win, name='Value_Slider',
-    startValue=None, size=(1.0, 0.1), pos=(0, -0.28), units=None,
-    labels=['0', '1', '2', '3', '4', '5'], ticks=(1, 2, 3, 4, 5, 6), granularity=1.0,
-    style='rating', styleTweaks=(), opacity=None,
-    labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
-    font='Open Sans', labelHeight=0.05,
-    flip=False, ori=0.0, depth=-3, readOnly=False)
-Value_Q_Stim = visual.TextStim(win=win, name='Value_Q_Stim',
-    text='Select the value of the image you remember:',
-    font='Open Sans',
-    pos=(0, 0.44), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-5.0);
 
 # --- Initialize components for Routine "Recognition_Break" ---
 EncBrk_Prompt = visual.TextStim(win=win, name='EncBrk_Prompt',
@@ -1786,11 +1692,11 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
     else:
         Choice_List.append('R')
     Loop_Count += 1
-    if Loop_Count >= 18:
+    if Loop_Count >= 10:
         Attn = 1
         Loop_Count = 0
     Enc_Loop_Count += 1
-    if Enc_Loop_Count >= 25:
+    if Enc_Loop_Count >= 16:
         Brk_Enc = 1
         Enc_Loop_Count = 0
         ProT += 1
@@ -2127,215 +2033,6 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
     L_Sq_Conf_Stim.opacity=1
     R_Sq_Conf_Stim.opacity=1
     # the Routine "Confidence" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # --- Prepare to start Routine "ITI" ---
-    continueRoutine = True
-    routineForceEnded = False
-    # update component parameters for each repeat
-    # keep track of which components have finished
-    ITIComponents = [ITI_Stim]
-    for thisComponent in ITIComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "ITI" ---
-    while continueRoutine and routineTimer.getTime() < 0.3:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *ITI_Stim* updates
-        if ITI_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            ITI_Stim.frameNStart = frameN  # exact frame index
-            ITI_Stim.tStart = t  # local t and not account for scr refresh
-            ITI_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(ITI_Stim, 'tStartRefresh')  # time at next scr refresh
-            ITI_Stim.setAutoDraw(True)
-        if ITI_Stim.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ITI_Stim.tStartRefresh + 0.3-frameTolerance:
-                # keep track of stop time/frame for later
-                ITI_Stim.tStop = t  # not accounting for scr refresh
-                ITI_Stim.frameNStop = frameN  # exact frame index
-                ITI_Stim.setAutoDraw(False)
-        
-        # check for quit (typically the Esc key)
-        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ITIComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "ITI" ---
-    for thisComponent in ITIComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if routineForceEnded:
-        routineTimer.reset()
-    else:
-        routineTimer.addTime(-0.300000)
-    
-    # --- Prepare to start Routine "Value" ---
-    continueRoutine = True
-    routineForceEnded = False
-    # update component parameters for each repeat
-    Value_L_Stim.setImage(L_Scene)
-    Value_R_Stim.setImage(R_Scene)
-    Value_Slider.reset()
-    # Run 'Begin Routine' code from Value_code
-    if Encoding_Resp.keys == "p":
-        if Confidence_Resp.keys[-1] == 'a':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 's':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 'd':
-            Value_R_Stim.opacity=0   
-        elif Confidence_Resp.keys[-1]  == 'j':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'k':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'l':
-            Value_L_Stim.opacity=0
-    
-    if Encoding_Resp.keys == "q":
-        if Confidence_Resp.keys[-1] == 'a':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 's':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 'd':
-            Value_L_Stim.opacity=0   
-        elif Confidence_Resp.keys[-1]  == 'j':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'k':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'l':
-            Value_R_Stim.opacity=0
-    # keep track of which components have finished
-    ValueComponents = [Sq_Value_Stim, Value_L_Stim, Value_R_Stim, Value_Slider, Value_Q_Stim]
-    for thisComponent in ValueComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "Value" ---
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *Sq_Value_Stim* updates
-        if Sq_Value_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Sq_Value_Stim.frameNStart = frameN  # exact frame index
-            Sq_Value_Stim.tStart = t  # local t and not account for scr refresh
-            Sq_Value_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Sq_Value_Stim, 'tStartRefresh')  # time at next scr refresh
-            Sq_Value_Stim.setAutoDraw(True)
-        
-        # *Value_L_Stim* updates
-        if Value_L_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_L_Stim.frameNStart = frameN  # exact frame index
-            Value_L_Stim.tStart = t  # local t and not account for scr refresh
-            Value_L_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_L_Stim, 'tStartRefresh')  # time at next scr refresh
-            Value_L_Stim.setAutoDraw(True)
-        
-        # *Value_R_Stim* updates
-        if Value_R_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_R_Stim.frameNStart = frameN  # exact frame index
-            Value_R_Stim.tStart = t  # local t and not account for scr refresh
-            Value_R_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_R_Stim, 'tStartRefresh')  # time at next scr refresh
-            Value_R_Stim.setAutoDraw(True)
-        
-        # *Value_Slider* updates
-        if Value_Slider.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_Slider.frameNStart = frameN  # exact frame index
-            Value_Slider.tStart = t  # local t and not account for scr refresh
-            Value_Slider.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_Slider, 'tStartRefresh')  # time at next scr refresh
-            Value_Slider.setAutoDraw(True)
-        
-        # Check Value_Slider for response to end routine
-        if Value_Slider.getRating() is not None and Value_Slider.status == STARTED:
-            continueRoutine = False
-        
-        # *Value_Q_Stim* updates
-        if Value_Q_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_Q_Stim.frameNStart = frameN  # exact frame index
-            Value_Q_Stim.tStart = t  # local t and not account for scr refresh
-            Value_Q_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_Q_Stim, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Value_Q_Stim.started')
-            Value_Q_Stim.setAutoDraw(True)
-        
-        # check for quit (typically the Esc key)
-        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ValueComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "Value" ---
-    for thisComponent in ValueComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    Practice_Recognition_Loop.addData('Value_Slider.response', Value_Slider.getRating())
-    # Run 'End Routine' code from Value_code
-    Value_L_Stim.opacity=1.0
-    Value_R_Stim.opacity=1.0
-    # the Routine "Value" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
     
@@ -2976,11 +2673,11 @@ for thisRecStim_Loop in RecStim_Loop:
     else:
         Choice_List.append('R')
     Loop_Count += 1
-    if Loop_Count >= 18:
+    if Loop_Count >= 10:
         Attn = 1
         Loop_Count = 0
     Enc_Loop_Count += 1
-    if Enc_Loop_Count >= 25:
+    if Enc_Loop_Count >= 16:
         Brk_Enc = 1
         Enc_Loop_Count = 0
         ProT += 1
@@ -3317,215 +3014,6 @@ for thisRecStim_Loop in RecStim_Loop:
     L_Sq_Conf_Stim.opacity=1
     R_Sq_Conf_Stim.opacity=1
     # the Routine "Confidence" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # --- Prepare to start Routine "ITI" ---
-    continueRoutine = True
-    routineForceEnded = False
-    # update component parameters for each repeat
-    # keep track of which components have finished
-    ITIComponents = [ITI_Stim]
-    for thisComponent in ITIComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "ITI" ---
-    while continueRoutine and routineTimer.getTime() < 0.3:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *ITI_Stim* updates
-        if ITI_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            ITI_Stim.frameNStart = frameN  # exact frame index
-            ITI_Stim.tStart = t  # local t and not account for scr refresh
-            ITI_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(ITI_Stim, 'tStartRefresh')  # time at next scr refresh
-            ITI_Stim.setAutoDraw(True)
-        if ITI_Stim.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ITI_Stim.tStartRefresh + 0.3-frameTolerance:
-                # keep track of stop time/frame for later
-                ITI_Stim.tStop = t  # not accounting for scr refresh
-                ITI_Stim.frameNStop = frameN  # exact frame index
-                ITI_Stim.setAutoDraw(False)
-        
-        # check for quit (typically the Esc key)
-        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ITIComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "ITI" ---
-    for thisComponent in ITIComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if routineForceEnded:
-        routineTimer.reset()
-    else:
-        routineTimer.addTime(-0.300000)
-    
-    # --- Prepare to start Routine "Value" ---
-    continueRoutine = True
-    routineForceEnded = False
-    # update component parameters for each repeat
-    Value_L_Stim.setImage(L_Scene)
-    Value_R_Stim.setImage(R_Scene)
-    Value_Slider.reset()
-    # Run 'Begin Routine' code from Value_code
-    if Encoding_Resp.keys == "p":
-        if Confidence_Resp.keys[-1] == 'a':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 's':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 'd':
-            Value_R_Stim.opacity=0   
-        elif Confidence_Resp.keys[-1]  == 'j':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'k':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'l':
-            Value_L_Stim.opacity=0
-    
-    if Encoding_Resp.keys == "q":
-        if Confidence_Resp.keys[-1] == 'a':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 's':
-            Value_L_Stim.opacity=0
-        elif Confidence_Resp.keys[-1] == 'd':
-            Value_L_Stim.opacity=0   
-        elif Confidence_Resp.keys[-1]  == 'j':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'k':
-            Value_R_Stim.opacity=0
-        elif Confidence_Resp.keys[-1]  == 'l':
-            Value_R_Stim.opacity=0
-    # keep track of which components have finished
-    ValueComponents = [Sq_Value_Stim, Value_L_Stim, Value_R_Stim, Value_Slider, Value_Q_Stim]
-    for thisComponent in ValueComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "Value" ---
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *Sq_Value_Stim* updates
-        if Sq_Value_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Sq_Value_Stim.frameNStart = frameN  # exact frame index
-            Sq_Value_Stim.tStart = t  # local t and not account for scr refresh
-            Sq_Value_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Sq_Value_Stim, 'tStartRefresh')  # time at next scr refresh
-            Sq_Value_Stim.setAutoDraw(True)
-        
-        # *Value_L_Stim* updates
-        if Value_L_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_L_Stim.frameNStart = frameN  # exact frame index
-            Value_L_Stim.tStart = t  # local t and not account for scr refresh
-            Value_L_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_L_Stim, 'tStartRefresh')  # time at next scr refresh
-            Value_L_Stim.setAutoDraw(True)
-        
-        # *Value_R_Stim* updates
-        if Value_R_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_R_Stim.frameNStart = frameN  # exact frame index
-            Value_R_Stim.tStart = t  # local t and not account for scr refresh
-            Value_R_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_R_Stim, 'tStartRefresh')  # time at next scr refresh
-            Value_R_Stim.setAutoDraw(True)
-        
-        # *Value_Slider* updates
-        if Value_Slider.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_Slider.frameNStart = frameN  # exact frame index
-            Value_Slider.tStart = t  # local t and not account for scr refresh
-            Value_Slider.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_Slider, 'tStartRefresh')  # time at next scr refresh
-            Value_Slider.setAutoDraw(True)
-        
-        # Check Value_Slider for response to end routine
-        if Value_Slider.getRating() is not None and Value_Slider.status == STARTED:
-            continueRoutine = False
-        
-        # *Value_Q_Stim* updates
-        if Value_Q_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Value_Q_Stim.frameNStart = frameN  # exact frame index
-            Value_Q_Stim.tStart = t  # local t and not account for scr refresh
-            Value_Q_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Value_Q_Stim, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Value_Q_Stim.started')
-            Value_Q_Stim.setAutoDraw(True)
-        
-        # check for quit (typically the Esc key)
-        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ValueComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "Value" ---
-    for thisComponent in ValueComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    RecStim_Loop.addData('Value_Slider.response', Value_Slider.getRating())
-    # Run 'End Routine' code from Value_code
-    Value_L_Stim.opacity=1.0
-    Value_R_Stim.opacity=1.0
-    # the Routine "Value" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
