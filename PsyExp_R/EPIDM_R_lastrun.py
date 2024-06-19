@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on Sun Jun 16 15:42:35 2024
+    on Wed Jun 19 14:40:49 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -191,7 +191,7 @@ Continue_Enc_Space = visual.TextStim(win=win, name='Continue_Enc_Space',
     languageStyle='LTR',
     depth=0.0);
 Transition_Prompt_Enc = visual.TextStim(win=win, name='Transition_Prompt_Enc',
-    text="you will now select cards\n\nReminder:\npress 'Q' to select the left card\npress 'P' to select the right card\n\nplease take your time in responding",
+    text="you will now select cards\n\nReminder:\npress 'A', 'S', or 'D' to indicate the right card IS NOT higher valued\n\npress 'J', 'K', or 'L' to indicate the right card IS higher valued\n\nplease take your time in responding",
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -255,6 +255,14 @@ R_Scene_Stim = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-5.0)
+Confidence_Scale_Rec = visual.ImageStim(
+    win=win,
+    name='Confidence_Scale_Rec', 
+    image='Response_Scale.png', mask=None, anchor='center',
+    ori=0.0, pos=(0, -0.3), size=(1, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-6.0)
 
 # --- Initialize components for Routine "Feedback" ---
 R_Sq_FB_Stim = visual.Rect(
@@ -285,59 +293,14 @@ L_Scene_FB_Stim = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-4.0)
-
-# --- Initialize components for Routine "Confidence" ---
-Confidence_RQ_Stim = visual.TextStim(win=win, name='Confidence_RQ_Stim',
-    text='How confident are you in your decision?',
-    font='Open Sans',
-    pos=(0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
-Confidence_LQ_Stim = visual.TextStim(win=win, name='Confidence_LQ_Stim',
-    text='How confident are you in your decision?',
-    font='Open Sans',
-    pos=(-0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
-R_Sq_Conf_Stim = visual.Rect(
-    win=win, name='R_Sq_Conf_Stim',units='norm', 
-    width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0.5, 0.2), anchor='center',
-    lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-2.0, interpolate=True)
-L_Sq_Conf_Stim = visual.Rect(
-    win=win, name='L_Sq_Conf_Stim',units='norm', 
-    width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(-0.5, 0.2), anchor='center',
-    lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-3.0, interpolate=True)
-Metamem_L_Stim = visual.ImageStim(
+Confidence_Scale_FB = visual.ImageStim(
     win=win,
-    name='Metamem_L_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(-0.4, 0.1), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-4.0)
-Confidence_Resp = keyboard.Keyboard()
-Metamem_R_Stim = visual.ImageStim(
-    win=win,
-    name='Metamem_R_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0.4, 0.1), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-7.0)
-Confidence_Scale = visual.ImageStim(
-    win=win,
-    name='Confidence_Scale', 
+    name='Confidence_Scale_FB', 
     image='Response_Scale.png', mask=None, anchor='center',
     ori=0.0, pos=(0, -0.3), size=(1, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-8.0)
+    texRes=128.0, interpolate=True, depth=-5.0)
 
 # --- Initialize components for Routine "ITI" ---
 ITI_Stim = visual.TextStim(win=win, name='ITI_Stim',
@@ -383,7 +346,7 @@ Continue_Enc_Space = visual.TextStim(win=win, name='Continue_Enc_Space',
     languageStyle='LTR',
     depth=0.0);
 Transition_Prompt_Enc = visual.TextStim(win=win, name='Transition_Prompt_Enc',
-    text="you will now select cards\n\nReminder:\npress 'Q' to select the left card\npress 'P' to select the right card\n\nplease take your time in responding",
+    text="you will now select cards\n\nReminder:\npress 'A', 'S', or 'D' to indicate the right card IS NOT higher valued\n\npress 'J', 'K', or 'L' to indicate the right card IS higher valued\n\nplease take your time in responding",
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -447,6 +410,14 @@ R_Scene_Stim = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-5.0)
+Confidence_Scale_Rec = visual.ImageStim(
+    win=win,
+    name='Confidence_Scale_Rec', 
+    image='Response_Scale.png', mask=None, anchor='center',
+    ori=0.0, pos=(0, -0.3), size=(1, 0.15),
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-6.0)
 
 # --- Initialize components for Routine "Feedback" ---
 R_Sq_FB_Stim = visual.Rect(
@@ -477,59 +448,14 @@ L_Scene_FB_Stim = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-4.0)
-
-# --- Initialize components for Routine "Confidence" ---
-Confidence_RQ_Stim = visual.TextStim(win=win, name='Confidence_RQ_Stim',
-    text='How confident are you in your decision?',
-    font='Open Sans',
-    pos=(0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
-Confidence_LQ_Stim = visual.TextStim(win=win, name='Confidence_LQ_Stim',
-    text='How confident are you in your decision?',
-    font='Open Sans',
-    pos=(-0.4, 0.1), height=0.05, wrapWidth=0.5, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
-R_Sq_Conf_Stim = visual.Rect(
-    win=win, name='R_Sq_Conf_Stim',units='norm', 
-    width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0.5, 0.2), anchor='center',
-    lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-2.0, interpolate=True)
-L_Sq_Conf_Stim = visual.Rect(
-    win=win, name='L_Sq_Conf_Stim',units='norm', 
-    width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(-0.5, 0.2), anchor='center',
-    lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-3.0, interpolate=True)
-Metamem_L_Stim = visual.ImageStim(
+Confidence_Scale_FB = visual.ImageStim(
     win=win,
-    name='Metamem_L_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(-0.4, 0.1), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-4.0)
-Confidence_Resp = keyboard.Keyboard()
-Metamem_R_Stim = visual.ImageStim(
-    win=win,
-    name='Metamem_R_Stim', 
-    image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0.4, 0.1), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-7.0)
-Confidence_Scale = visual.ImageStim(
-    win=win,
-    name='Confidence_Scale', 
+    name='Confidence_Scale_FB', 
     image='Response_Scale.png', mask=None, anchor='center',
     ori=0.0, pos=(0, -0.3), size=(1, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-8.0)
+    texRes=128.0, interpolate=True, depth=-5.0)
 
 # --- Initialize components for Routine "Recognition_Break" ---
 EncBrk_Prompt = visual.TextStim(win=win, name='EncBrk_Prompt',
@@ -1578,7 +1504,7 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
     L_Scene_Stim.setImage(L_Scene)
     R_Scene_Stim.setImage(R_Scene)
     # keep track of which components have finished
-    RecognitionComponents = [L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim]
+    RecognitionComponents = [L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim, Confidence_Scale_Rec]
     for thisComponent in RecognitionComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1632,7 +1558,7 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
             win.callOnFlip(Encoding_Resp.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(Encoding_Resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if Encoding_Resp.status == STARTED and not waitOnFlip:
-            theseKeys = Encoding_Resp.getKeys(keyList=['q','p'], waitRelease=False)
+            theseKeys = Encoding_Resp.getKeys(keyList=['a','s','d','j','k','l'], waitRelease=False)
             _Encoding_Resp_allKeys.extend(theseKeys)
             if len(_Encoding_Resp_allKeys):
                 Encoding_Resp.keys = _Encoding_Resp_allKeys[-1].name  # just the last key pressed
@@ -1657,6 +1583,15 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
             R_Scene_Stim.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(R_Scene_Stim, 'tStartRefresh')  # time at next scr refresh
             R_Scene_Stim.setAutoDraw(True)
+        
+        # *Confidence_Scale_Rec* updates
+        if Confidence_Scale_Rec.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            Confidence_Scale_Rec.frameNStart = frameN  # exact frame index
+            Confidence_Scale_Rec.tStart = t  # local t and not account for scr refresh
+            Confidence_Scale_Rec.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Confidence_Scale_Rec, 'tStartRefresh')  # time at next scr refresh
+            Confidence_Scale_Rec.setAutoDraw(True)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1740,15 +1675,15 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
         # update component parameters for each repeat
         # Run 'Begin Routine' code from Border_code
         if Encoding_Resp.keys:
-            if Encoding_Resp.keys[-1] == 'q':
+            if Encoding_Resp.keys[-1] == 'a' or Encoding_Resp.keys[-1] == 's' or Encoding_Resp.keys[-1] == 'd':
                 L_Sq_FB_Stim.lineColor=[1.0000, -1.0000, -1.0000]
-            elif Encoding_Resp.keys[-1]  == 'p':
+            elif Encoding_Resp.keys[-1] == 'j' or Encoding_Resp.keys[-1] == 'k' or Encoding_Resp.keys[-1] == 'l':
                 R_Sq_FB_Stim.lineColor=[1.0000, -1.0000, -1.0000]
         
         R_Scene_FB_Stim.setImage(R_Scene)
         L_Scene_FB_Stim.setImage(L_Scene)
         # keep track of which components have finished
-        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim]
+        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim, Confidence_Scale_FB]
         for thisComponent in FeedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1834,6 +1769,22 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
                     L_Scene_FB_Stim.frameNStop = frameN  # exact frame index
                     L_Scene_FB_Stim.setAutoDraw(False)
             
+            # *Confidence_Scale_FB* updates
+            if Confidence_Scale_FB.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                Confidence_Scale_FB.frameNStart = frameN  # exact frame index
+                Confidence_Scale_FB.tStart = t  # local t and not account for scr refresh
+                Confidence_Scale_FB.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(Confidence_Scale_FB, 'tStartRefresh')  # time at next scr refresh
+                Confidence_Scale_FB.setAutoDraw(True)
+            if Confidence_Scale_FB.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > Confidence_Scale_FB.tStartRefresh + 2-frameTolerance:
+                    # keep track of stop time/frame for later
+                    Confidence_Scale_FB.tStop = t  # not accounting for scr refresh
+                    Confidence_Scale_FB.frameNStop = frameN  # exact frame index
+                    Confidence_Scale_FB.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -1871,169 +1822,6 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
             routineTimer.addTime(-2.000000)
     # completed FB repeats of 'Practice_FB_Loop'
     
-    
-    # --- Prepare to start Routine "Confidence" ---
-    continueRoutine = True
-    routineForceEnded = False
-    # update component parameters for each repeat
-    Metamem_L_Stim.setImage(L_Scene)
-    Confidence_Resp.keys = []
-    Confidence_Resp.rt = []
-    _Confidence_Resp_allKeys = []
-    # Run 'Begin Routine' code from ConfBorder_Code
-    if Encoding_Resp.keys:
-        if Encoding_Resp.keys[-1] == 'q':
-            L_Sq_Conf_Stim.lineColor=[1.0000, -1.0000, -1.0000]
-            Metamem_R_Stim.opacity=0
-            R_Sq_Conf_Stim.opacity=0
-        elif Encoding_Resp.keys[-1]  == 'p':
-            R_Sq_Conf_Stim.lineColor=[1.0000, -1.0000, -1.0000]
-            Metamem_L_Stim.opacity=0
-            L_Sq_Conf_Stim.opacity=0
-    Metamem_R_Stim.setImage(R_Scene)
-    # keep track of which components have finished
-    ConfidenceComponents = [Confidence_RQ_Stim, Confidence_LQ_Stim, R_Sq_Conf_Stim, L_Sq_Conf_Stim, Metamem_L_Stim, Confidence_Resp, Metamem_R_Stim, Confidence_Scale]
-    for thisComponent in ConfidenceComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "Confidence" ---
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *Confidence_RQ_Stim* updates
-        if Confidence_RQ_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_RQ_Stim.frameNStart = frameN  # exact frame index
-            Confidence_RQ_Stim.tStart = t  # local t and not account for scr refresh
-            Confidence_RQ_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_RQ_Stim, 'tStartRefresh')  # time at next scr refresh
-            Confidence_RQ_Stim.setAutoDraw(True)
-        
-        # *Confidence_LQ_Stim* updates
-        if Confidence_LQ_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_LQ_Stim.frameNStart = frameN  # exact frame index
-            Confidence_LQ_Stim.tStart = t  # local t and not account for scr refresh
-            Confidence_LQ_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_LQ_Stim, 'tStartRefresh')  # time at next scr refresh
-            Confidence_LQ_Stim.setAutoDraw(True)
-        
-        # *R_Sq_Conf_Stim* updates
-        if R_Sq_Conf_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            R_Sq_Conf_Stim.frameNStart = frameN  # exact frame index
-            R_Sq_Conf_Stim.tStart = t  # local t and not account for scr refresh
-            R_Sq_Conf_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(R_Sq_Conf_Stim, 'tStartRefresh')  # time at next scr refresh
-            R_Sq_Conf_Stim.setAutoDraw(True)
-        
-        # *L_Sq_Conf_Stim* updates
-        if L_Sq_Conf_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            L_Sq_Conf_Stim.frameNStart = frameN  # exact frame index
-            L_Sq_Conf_Stim.tStart = t  # local t and not account for scr refresh
-            L_Sq_Conf_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(L_Sq_Conf_Stim, 'tStartRefresh')  # time at next scr refresh
-            L_Sq_Conf_Stim.setAutoDraw(True)
-        
-        # *Metamem_L_Stim* updates
-        if Metamem_L_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Metamem_L_Stim.frameNStart = frameN  # exact frame index
-            Metamem_L_Stim.tStart = t  # local t and not account for scr refresh
-            Metamem_L_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Metamem_L_Stim, 'tStartRefresh')  # time at next scr refresh
-            Metamem_L_Stim.setAutoDraw(True)
-        
-        # *Confidence_Resp* updates
-        waitOnFlip = False
-        if Confidence_Resp.status == NOT_STARTED and tThisFlip >= 0.3-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_Resp.frameNStart = frameN  # exact frame index
-            Confidence_Resp.tStart = t  # local t and not account for scr refresh
-            Confidence_Resp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_Resp, 'tStartRefresh')  # time at next scr refresh
-            Confidence_Resp.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(Confidence_Resp.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(Confidence_Resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if Confidence_Resp.status == STARTED and not waitOnFlip:
-            theseKeys = Confidence_Resp.getKeys(keyList=['a','s','d','j','k','l'], waitRelease=False)
-            _Confidence_Resp_allKeys.extend(theseKeys)
-            if len(_Confidence_Resp_allKeys):
-                Confidence_Resp.keys = _Confidence_Resp_allKeys[-1].name  # just the last key pressed
-                Confidence_Resp.rt = _Confidence_Resp_allKeys[-1].rt
-                # a response ends the routine
-                continueRoutine = False
-        
-        # *Metamem_R_Stim* updates
-        if Metamem_R_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Metamem_R_Stim.frameNStart = frameN  # exact frame index
-            Metamem_R_Stim.tStart = t  # local t and not account for scr refresh
-            Metamem_R_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Metamem_R_Stim, 'tStartRefresh')  # time at next scr refresh
-            Metamem_R_Stim.setAutoDraw(True)
-        
-        # *Confidence_Scale* updates
-        if Confidence_Scale.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_Scale.frameNStart = frameN  # exact frame index
-            Confidence_Scale.tStart = t  # local t and not account for scr refresh
-            Confidence_Scale.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_Scale, 'tStartRefresh')  # time at next scr refresh
-            Confidence_Scale.setAutoDraw(True)
-        
-        # check for quit (typically the Esc key)
-        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ConfidenceComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "Confidence" ---
-    for thisComponent in ConfidenceComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # check responses
-    if Confidence_Resp.keys in ['', [], None]:  # No response was made
-        Confidence_Resp.keys = None
-    Practice_Recognition_Loop.addData('Confidence_Resp.keys',Confidence_Resp.keys)
-    if Confidence_Resp.keys != None:  # we had a response
-        Practice_Recognition_Loop.addData('Confidence_Resp.rt', Confidence_Resp.rt)
-    # Run 'End Routine' code from ConfBorder_Code
-    Metamem_R_Stim.opacity=1.0
-    Metamem_L_Stim.opacity=1.0
-    L_Sq_Conf_Stim.opacity=1
-    R_Sq_Conf_Stim.opacity=1
-    # the Routine "Confidence" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     thisExp.nextEntry()
     
 # completed 1.0 repeats of 'Practice_Recognition_Loop'
@@ -2559,7 +2347,7 @@ for thisRecStim_Loop in RecStim_Loop:
     L_Scene_Stim.setImage(L_Scene)
     R_Scene_Stim.setImage(R_Scene)
     # keep track of which components have finished
-    RecognitionComponents = [L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim]
+    RecognitionComponents = [L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim, Confidence_Scale_Rec]
     for thisComponent in RecognitionComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2613,7 +2401,7 @@ for thisRecStim_Loop in RecStim_Loop:
             win.callOnFlip(Encoding_Resp.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(Encoding_Resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if Encoding_Resp.status == STARTED and not waitOnFlip:
-            theseKeys = Encoding_Resp.getKeys(keyList=['q','p'], waitRelease=False)
+            theseKeys = Encoding_Resp.getKeys(keyList=['a','s','d','j','k','l'], waitRelease=False)
             _Encoding_Resp_allKeys.extend(theseKeys)
             if len(_Encoding_Resp_allKeys):
                 Encoding_Resp.keys = _Encoding_Resp_allKeys[-1].name  # just the last key pressed
@@ -2638,6 +2426,15 @@ for thisRecStim_Loop in RecStim_Loop:
             R_Scene_Stim.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(R_Scene_Stim, 'tStartRefresh')  # time at next scr refresh
             R_Scene_Stim.setAutoDraw(True)
+        
+        # *Confidence_Scale_Rec* updates
+        if Confidence_Scale_Rec.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            Confidence_Scale_Rec.frameNStart = frameN  # exact frame index
+            Confidence_Scale_Rec.tStart = t  # local t and not account for scr refresh
+            Confidence_Scale_Rec.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Confidence_Scale_Rec, 'tStartRefresh')  # time at next scr refresh
+            Confidence_Scale_Rec.setAutoDraw(True)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2721,15 +2518,15 @@ for thisRecStim_Loop in RecStim_Loop:
         # update component parameters for each repeat
         # Run 'Begin Routine' code from Border_code
         if Encoding_Resp.keys:
-            if Encoding_Resp.keys[-1] == 'q':
+            if Encoding_Resp.keys[-1] == 'a' or Encoding_Resp.keys[-1] == 's' or Encoding_Resp.keys[-1] == 'd':
                 L_Sq_FB_Stim.lineColor=[1.0000, -1.0000, -1.0000]
-            elif Encoding_Resp.keys[-1]  == 'p':
+            elif Encoding_Resp.keys[-1] == 'j' or Encoding_Resp.keys[-1] == 'k' or Encoding_Resp.keys[-1] == 'l':
                 R_Sq_FB_Stim.lineColor=[1.0000, -1.0000, -1.0000]
         
         R_Scene_FB_Stim.setImage(R_Scene)
         L_Scene_FB_Stim.setImage(L_Scene)
         # keep track of which components have finished
-        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim]
+        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim, Confidence_Scale_FB]
         for thisComponent in FeedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2815,6 +2612,22 @@ for thisRecStim_Loop in RecStim_Loop:
                     L_Scene_FB_Stim.frameNStop = frameN  # exact frame index
                     L_Scene_FB_Stim.setAutoDraw(False)
             
+            # *Confidence_Scale_FB* updates
+            if Confidence_Scale_FB.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                Confidence_Scale_FB.frameNStart = frameN  # exact frame index
+                Confidence_Scale_FB.tStart = t  # local t and not account for scr refresh
+                Confidence_Scale_FB.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(Confidence_Scale_FB, 'tStartRefresh')  # time at next scr refresh
+                Confidence_Scale_FB.setAutoDraw(True)
+            if Confidence_Scale_FB.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > Confidence_Scale_FB.tStartRefresh + 2-frameTolerance:
+                    # keep track of stop time/frame for later
+                    Confidence_Scale_FB.tStop = t  # not accounting for scr refresh
+                    Confidence_Scale_FB.frameNStop = frameN  # exact frame index
+                    Confidence_Scale_FB.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -2852,169 +2665,6 @@ for thisRecStim_Loop in RecStim_Loop:
             routineTimer.addTime(-2.000000)
     # completed FB repeats of 'FB_Loop'
     
-    
-    # --- Prepare to start Routine "Confidence" ---
-    continueRoutine = True
-    routineForceEnded = False
-    # update component parameters for each repeat
-    Metamem_L_Stim.setImage(L_Scene)
-    Confidence_Resp.keys = []
-    Confidence_Resp.rt = []
-    _Confidence_Resp_allKeys = []
-    # Run 'Begin Routine' code from ConfBorder_Code
-    if Encoding_Resp.keys:
-        if Encoding_Resp.keys[-1] == 'q':
-            L_Sq_Conf_Stim.lineColor=[1.0000, -1.0000, -1.0000]
-            Metamem_R_Stim.opacity=0
-            R_Sq_Conf_Stim.opacity=0
-        elif Encoding_Resp.keys[-1]  == 'p':
-            R_Sq_Conf_Stim.lineColor=[1.0000, -1.0000, -1.0000]
-            Metamem_L_Stim.opacity=0
-            L_Sq_Conf_Stim.opacity=0
-    Metamem_R_Stim.setImage(R_Scene)
-    # keep track of which components have finished
-    ConfidenceComponents = [Confidence_RQ_Stim, Confidence_LQ_Stim, R_Sq_Conf_Stim, L_Sq_Conf_Stim, Metamem_L_Stim, Confidence_Resp, Metamem_R_Stim, Confidence_Scale]
-    for thisComponent in ConfidenceComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "Confidence" ---
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *Confidence_RQ_Stim* updates
-        if Confidence_RQ_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_RQ_Stim.frameNStart = frameN  # exact frame index
-            Confidence_RQ_Stim.tStart = t  # local t and not account for scr refresh
-            Confidence_RQ_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_RQ_Stim, 'tStartRefresh')  # time at next scr refresh
-            Confidence_RQ_Stim.setAutoDraw(True)
-        
-        # *Confidence_LQ_Stim* updates
-        if Confidence_LQ_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_LQ_Stim.frameNStart = frameN  # exact frame index
-            Confidence_LQ_Stim.tStart = t  # local t and not account for scr refresh
-            Confidence_LQ_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_LQ_Stim, 'tStartRefresh')  # time at next scr refresh
-            Confidence_LQ_Stim.setAutoDraw(True)
-        
-        # *R_Sq_Conf_Stim* updates
-        if R_Sq_Conf_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            R_Sq_Conf_Stim.frameNStart = frameN  # exact frame index
-            R_Sq_Conf_Stim.tStart = t  # local t and not account for scr refresh
-            R_Sq_Conf_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(R_Sq_Conf_Stim, 'tStartRefresh')  # time at next scr refresh
-            R_Sq_Conf_Stim.setAutoDraw(True)
-        
-        # *L_Sq_Conf_Stim* updates
-        if L_Sq_Conf_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            L_Sq_Conf_Stim.frameNStart = frameN  # exact frame index
-            L_Sq_Conf_Stim.tStart = t  # local t and not account for scr refresh
-            L_Sq_Conf_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(L_Sq_Conf_Stim, 'tStartRefresh')  # time at next scr refresh
-            L_Sq_Conf_Stim.setAutoDraw(True)
-        
-        # *Metamem_L_Stim* updates
-        if Metamem_L_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Metamem_L_Stim.frameNStart = frameN  # exact frame index
-            Metamem_L_Stim.tStart = t  # local t and not account for scr refresh
-            Metamem_L_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Metamem_L_Stim, 'tStartRefresh')  # time at next scr refresh
-            Metamem_L_Stim.setAutoDraw(True)
-        
-        # *Confidence_Resp* updates
-        waitOnFlip = False
-        if Confidence_Resp.status == NOT_STARTED and tThisFlip >= 0.3-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_Resp.frameNStart = frameN  # exact frame index
-            Confidence_Resp.tStart = t  # local t and not account for scr refresh
-            Confidence_Resp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_Resp, 'tStartRefresh')  # time at next scr refresh
-            Confidence_Resp.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(Confidence_Resp.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(Confidence_Resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if Confidence_Resp.status == STARTED and not waitOnFlip:
-            theseKeys = Confidence_Resp.getKeys(keyList=['a','s','d','j','k','l'], waitRelease=False)
-            _Confidence_Resp_allKeys.extend(theseKeys)
-            if len(_Confidence_Resp_allKeys):
-                Confidence_Resp.keys = _Confidence_Resp_allKeys[-1].name  # just the last key pressed
-                Confidence_Resp.rt = _Confidence_Resp_allKeys[-1].rt
-                # a response ends the routine
-                continueRoutine = False
-        
-        # *Metamem_R_Stim* updates
-        if Metamem_R_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Metamem_R_Stim.frameNStart = frameN  # exact frame index
-            Metamem_R_Stim.tStart = t  # local t and not account for scr refresh
-            Metamem_R_Stim.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Metamem_R_Stim, 'tStartRefresh')  # time at next scr refresh
-            Metamem_R_Stim.setAutoDraw(True)
-        
-        # *Confidence_Scale* updates
-        if Confidence_Scale.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Confidence_Scale.frameNStart = frameN  # exact frame index
-            Confidence_Scale.tStart = t  # local t and not account for scr refresh
-            Confidence_Scale.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Confidence_Scale, 'tStartRefresh')  # time at next scr refresh
-            Confidence_Scale.setAutoDraw(True)
-        
-        # check for quit (typically the Esc key)
-        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ConfidenceComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "Confidence" ---
-    for thisComponent in ConfidenceComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # check responses
-    if Confidence_Resp.keys in ['', [], None]:  # No response was made
-        Confidence_Resp.keys = None
-    RecStim_Loop.addData('Confidence_Resp.keys',Confidence_Resp.keys)
-    if Confidence_Resp.keys != None:  # we had a response
-        RecStim_Loop.addData('Confidence_Resp.rt', Confidence_Resp.rt)
-    # Run 'End Routine' code from ConfBorder_Code
-    Metamem_R_Stim.opacity=1.0
-    Metamem_L_Stim.opacity=1.0
-    L_Sq_Conf_Stim.opacity=1
-    R_Sq_Conf_Stim.opacity=1
-    # the Routine "Confidence" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
     RecBrk_Loop = data.TrialHandler(nReps=Brk_Enc, method='random', 
