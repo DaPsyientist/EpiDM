@@ -14,6 +14,7 @@ PS = inputFiles[1] #Provides information regarding which images are old, and whi
 Select = inputFiles[2] #List of 240 intermixed previously seen and new trials to combine with 360 choices for pseudorandomization // actual old trials differ for each participant
 Old = inputFiles[3] #Provides pairing of which trials in the encoding responses are used to create old-old trials
 
+
 #   Step 1: Read in participant data
 Enc_DF = pd.read_csv(EncFile)
 
@@ -70,7 +71,10 @@ Ppt_attn, Ppt_attnum = attn_num(Enc_DF)
 print(f'SANITY CHECK #3 (Attention Responses): Participant responded {Ppt_attnum} times, it should be 20.')
 
 #Specify Answer Key (for attention checks)
-Attn_Ans = [4, 5, 2, 1, 2, 5, 1, 2, 0, 2, 4, 2, 3, 4, 2, 4, 3, 1, 1, 2]
+if PS.split('_')[1][0] == "A":
+    Attn_Ans = [4, 5, 2, 1, 2, 5, 1, 2, 0, 2, 4, 2, 3, 4, 2, 4, 3, 1, 1, 2]
+elif PS.split('_')[1][0] == "B":
+    Attn_Ans = [3, 1, 4, 5, 1, 3, 5, 3, 2, 0, 4, 4, 4, 4, 2, 2, 5, 1, 0, 2]
 
 #Define function to calculate attention check accuracy
 def Attn_check(df):
