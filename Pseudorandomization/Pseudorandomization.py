@@ -43,9 +43,6 @@ def filter_columns(df):
 #Filter training data trials
 Enc_clean = filter_columns(Enc_DF.loc[resps_idx(Enc_DF):].reset_index(drop=True))
 
-# Filter out rows with any NaN values
-Enc_clean = Enc_clean.dropna()
-
 # Sanity check #1: Number of trials in the data
 print(f'SANITY CHECK #1 (Trial Numbers): Participant\'s data has {Enc_clean.shape[0]} trials, it should be 240.')
 
