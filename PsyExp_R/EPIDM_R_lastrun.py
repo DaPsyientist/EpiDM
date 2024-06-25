@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on Thu Jun 20 15:30:09 2024
+    on Sun Jun 23 11:10:17 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -219,18 +219,25 @@ Dealer_Stim = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 
 # --- Initialize components for Routine "Recognition" ---
+Question_Stim = visual.TextStim(win=win, name='Question_Stim',
+    text='Is the right image more highly valued?',
+    font='Open Sans',
+    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=1.0, 
+    languageStyle='LTR',
+    depth=0.0);
 L_Sq_Stim = visual.Rect(
     win=win, name='L_Sq_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(-0.5, 0.2), anchor='center',
+    ori=0.0, pos=(-0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=0.0, interpolate=True)
+    opacity=None, depth=-1.0, interpolate=True)
 R_Sq_Stim = visual.Rect(
     win=win, name='R_Sq_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0.5, 0.2), anchor='center',
+    ori=0.0, pos=(0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-1.0, interpolate=True)
+    opacity=None, depth=-2.0, interpolate=True)
 Encoding_Resp = keyboard.Keyboard()
 # Run 'Begin Experiment' code from Key_Tracking_Code
 Choice_List = []
@@ -243,45 +250,45 @@ L_Scene_Stim = visual.ImageStim(
     win=win,
     name='L_Scene_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(-0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(-0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-4.0)
+    texRes=128.0, interpolate=True, depth=-5.0)
 R_Scene_Stim = visual.ImageStim(
     win=win,
     name='R_Scene_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-5.0)
+    texRes=128.0, interpolate=True, depth=-6.0)
 Confidence_Scale_Rec = visual.ImageStim(
     win=win,
     name='Confidence_Scale_Rec', 
     image='Response_Scale.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, -0.3), size=(1, 0.15),
+    ori=0.0, pos=(0, -0.4), size=(1, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-6.0)
+    texRes=128.0, interpolate=True, depth=-7.0)
 
 # --- Initialize components for Routine "Feedback" ---
 R_Sq_FB_Stim = visual.Rect(
     win=win, name='R_Sq_FB_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0.5, 0.2), anchor='center',
+    ori=0.0, pos=(0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=1.0, depth=-1.0, interpolate=True)
 L_Sq_FB_Stim = visual.Rect(
     win=win, name='L_Sq_FB_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(-0.5, 0.2), anchor='center',
+    ori=0.0, pos=(-0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=1.0, depth=-2.0, interpolate=True)
 R_Scene_FB_Stim = visual.ImageStim(
     win=win,
     name='R_Scene_FB_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-3.0)
@@ -289,18 +296,10 @@ L_Scene_FB_Stim = visual.ImageStim(
     win=win,
     name='L_Scene_FB_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(-0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(-0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-4.0)
-Confidence_Scale_FB = visual.ImageStim(
-    win=win,
-    name='Confidence_Scale_FB', 
-    image='Response_Scale.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, -0.3), size=(1, 0.15),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-5.0)
 
 # --- Initialize components for Routine "ITI" ---
 ITI_Stim = visual.TextStim(win=win, name='ITI_Stim',
@@ -374,18 +373,25 @@ Dealer_Stim = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 
 # --- Initialize components for Routine "Recognition" ---
+Question_Stim = visual.TextStim(win=win, name='Question_Stim',
+    text='Is the right image more highly valued?',
+    font='Open Sans',
+    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=1.0, 
+    languageStyle='LTR',
+    depth=0.0);
 L_Sq_Stim = visual.Rect(
     win=win, name='L_Sq_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(-0.5, 0.2), anchor='center',
+    ori=0.0, pos=(-0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=0.0, interpolate=True)
+    opacity=None, depth=-1.0, interpolate=True)
 R_Sq_Stim = visual.Rect(
     win=win, name='R_Sq_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0.5, 0.2), anchor='center',
+    ori=0.0, pos=(0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-1.0, interpolate=True)
+    opacity=None, depth=-2.0, interpolate=True)
 Encoding_Resp = keyboard.Keyboard()
 # Run 'Begin Experiment' code from Key_Tracking_Code
 Choice_List = []
@@ -398,45 +404,45 @@ L_Scene_Stim = visual.ImageStim(
     win=win,
     name='L_Scene_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(-0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(-0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-4.0)
+    texRes=128.0, interpolate=True, depth=-5.0)
 R_Scene_Stim = visual.ImageStim(
     win=win,
     name='R_Scene_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-5.0)
+    texRes=128.0, interpolate=True, depth=-6.0)
 Confidence_Scale_Rec = visual.ImageStim(
     win=win,
     name='Confidence_Scale_Rec', 
     image='Response_Scale.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, -0.3), size=(1, 0.15),
+    ori=0.0, pos=(0, -0.4), size=(1, 0.15),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-6.0)
+    texRes=128.0, interpolate=True, depth=-7.0)
 
 # --- Initialize components for Routine "Feedback" ---
 R_Sq_FB_Stim = visual.Rect(
     win=win, name='R_Sq_FB_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(0.5, 0.2), anchor='center',
+    ori=0.0, pos=(0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=1.0, depth=-1.0, interpolate=True)
 L_Sq_FB_Stim = visual.Rect(
     win=win, name='L_Sq_FB_Stim',units='norm', 
     width=(0.9, 1.2)[0], height=(0.9, 1.2)[1],
-    ori=0.0, pos=(-0.5, 0.2), anchor='center',
+    ori=0.0, pos=(-0.5, -0.01), anchor='center',
     lineWidth=7.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=1.0, depth=-2.0, interpolate=True)
 R_Scene_FB_Stim = visual.ImageStim(
     win=win,
     name='R_Scene_FB_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-3.0)
@@ -444,18 +450,10 @@ L_Scene_FB_Stim = visual.ImageStim(
     win=win,
     name='L_Scene_FB_Stim', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(-0.4, 0.1), size=(0.5, 0.5),
+    ori=0.0, pos=(-0.4, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-4.0)
-Confidence_Scale_FB = visual.ImageStim(
-    win=win,
-    name='Confidence_Scale_FB', 
-    image='Response_Scale.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, -0.3), size=(1, 0.15),
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-5.0)
 
 # --- Initialize components for Routine "Recognition_Break" ---
 EncBrk_Prompt = visual.TextStim(win=win, name='EncBrk_Prompt',
@@ -1504,7 +1502,7 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
     L_Scene_Stim.setImage(L_Scene)
     R_Scene_Stim.setImage(R_Scene)
     # keep track of which components have finished
-    RecognitionComponents = [L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim, Confidence_Scale_Rec]
+    RecognitionComponents = [Question_Stim, L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim, Confidence_Scale_Rec]
     for thisComponent in RecognitionComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1525,6 +1523,15 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *Question_Stim* updates
+        if Question_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            Question_Stim.frameNStart = frameN  # exact frame index
+            Question_Stim.tStart = t  # local t and not account for scr refresh
+            Question_Stim.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Question_Stim, 'tStartRefresh')  # time at next scr refresh
+            Question_Stim.setAutoDraw(True)
         
         # *L_Sq_Stim* updates
         if L_Sq_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1683,7 +1690,7 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
         R_Scene_FB_Stim.setImage(R_Scene)
         L_Scene_FB_Stim.setImage(L_Scene)
         # keep track of which components have finished
-        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim, Confidence_Scale_FB]
+        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim]
         for thisComponent in FeedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1768,22 +1775,6 @@ for thisPractice_Recognition_Loop in Practice_Recognition_Loop:
                     L_Scene_FB_Stim.tStop = t  # not accounting for scr refresh
                     L_Scene_FB_Stim.frameNStop = frameN  # exact frame index
                     L_Scene_FB_Stim.setAutoDraw(False)
-            
-            # *Confidence_Scale_FB* updates
-            if Confidence_Scale_FB.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                Confidence_Scale_FB.frameNStart = frameN  # exact frame index
-                Confidence_Scale_FB.tStart = t  # local t and not account for scr refresh
-                Confidence_Scale_FB.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Confidence_Scale_FB, 'tStartRefresh')  # time at next scr refresh
-                Confidence_Scale_FB.setAutoDraw(True)
-            if Confidence_Scale_FB.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Confidence_Scale_FB.tStartRefresh + 2-frameTolerance:
-                    # keep track of stop time/frame for later
-                    Confidence_Scale_FB.tStop = t  # not accounting for scr refresh
-                    Confidence_Scale_FB.frameNStop = frameN  # exact frame index
-                    Confidence_Scale_FB.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2347,7 +2338,7 @@ for thisRecStim_Loop in RecStim_Loop:
     L_Scene_Stim.setImage(L_Scene)
     R_Scene_Stim.setImage(R_Scene)
     # keep track of which components have finished
-    RecognitionComponents = [L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim, Confidence_Scale_Rec]
+    RecognitionComponents = [Question_Stim, L_Sq_Stim, R_Sq_Stim, Encoding_Resp, L_Scene_Stim, R_Scene_Stim, Confidence_Scale_Rec]
     for thisComponent in RecognitionComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2368,6 +2359,15 @@ for thisRecStim_Loop in RecStim_Loop:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *Question_Stim* updates
+        if Question_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            Question_Stim.frameNStart = frameN  # exact frame index
+            Question_Stim.tStart = t  # local t and not account for scr refresh
+            Question_Stim.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Question_Stim, 'tStartRefresh')  # time at next scr refresh
+            Question_Stim.setAutoDraw(True)
         
         # *L_Sq_Stim* updates
         if L_Sq_Stim.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2526,7 +2526,7 @@ for thisRecStim_Loop in RecStim_Loop:
         R_Scene_FB_Stim.setImage(R_Scene)
         L_Scene_FB_Stim.setImage(L_Scene)
         # keep track of which components have finished
-        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim, Confidence_Scale_FB]
+        FeedbackComponents = [R_Sq_FB_Stim, L_Sq_FB_Stim, R_Scene_FB_Stim, L_Scene_FB_Stim]
         for thisComponent in FeedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2611,22 +2611,6 @@ for thisRecStim_Loop in RecStim_Loop:
                     L_Scene_FB_Stim.tStop = t  # not accounting for scr refresh
                     L_Scene_FB_Stim.frameNStop = frameN  # exact frame index
                     L_Scene_FB_Stim.setAutoDraw(False)
-            
-            # *Confidence_Scale_FB* updates
-            if Confidence_Scale_FB.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                Confidence_Scale_FB.frameNStart = frameN  # exact frame index
-                Confidence_Scale_FB.tStart = t  # local t and not account for scr refresh
-                Confidence_Scale_FB.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Confidence_Scale_FB, 'tStartRefresh')  # time at next scr refresh
-                Confidence_Scale_FB.setAutoDraw(True)
-            if Confidence_Scale_FB.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Confidence_Scale_FB.tStartRefresh + 2-frameTolerance:
-                    # keep track of stop time/frame for later
-                    Confidence_Scale_FB.tStop = t  # not accounting for scr refresh
-                    Confidence_Scale_FB.frameNStop = frameN  # exact frame index
-                    Confidence_Scale_FB.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
